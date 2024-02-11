@@ -13,5 +13,5 @@ This is a Google Chrome extension that tracks the time spent on different domain
 This project is still being developing.
 
 ## App Screenshot
-<img src="./screenshots/main-screen.png" width="300" >
+<img src="./screenshots/main-screen.png" width="500" >
 
