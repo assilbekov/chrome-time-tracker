@@ -1,6 +1,20 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 
+// It's here only for testing purpose.
+const defaultTimeSpentOnDomains: TimeSpentOnDomains = {
+  "https://www.google.com": 13243254,
+  "https://www.youtube.com": 1234324,
+  "https://www.facebook.com": 1234324,
+  "https://www.amazon.com": 243524,
+  "https://www.reddit.com": 6745470,
+  "https://www.twitter.com": 243234,
+  "https://www.instagram.com": 766437,
+  "https://www.linkedin.com": 2340220,
+  "https://www.pinterest.com": 143560,
+  "https://www.tiktok.com": 234234,
+};
+
 const Popup = () => {
   const [trackedTime, setTrackedTime] = useState<TimeSpentOnDomains>({});
   const timesToShow = useMemo(() => {
@@ -70,7 +84,7 @@ const Popup = () => {
                 listStyle: "none",
                 padding: "10px 16px",
                 borderBottom: "1px solid #f1f1f1",
-                boxShadow: `rgba(99, 99, 99, 0.2) 0px 2px 8px 0px`,
+                boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
                 marginBottom: "10px",
               }}
             >
