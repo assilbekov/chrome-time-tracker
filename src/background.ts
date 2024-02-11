@@ -1,4 +1,17 @@
+type TimeSpentOnDomains = {
+  [domain: string]: number; // Represents the time counted in milliseconds.
+}
+
+type DomainTrack = {
+  domain: string;
+  startTime: number;
+};
+
+let currentDomainTrack: DomainTrack | null = null;
+let timeSpentOnDomains: TimeSpentOnDomains = {};
+
 // TODO: Refactor to use modules.
+// Init app logic.
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   switch (message.action) {
     case "startTracking":
@@ -40,23 +53,6 @@ function resetTracking() {
   stopTracking();
   startTracking();
 }
-
-// App logic. 
-// TODO: Refactor to use modules.
-
-type TimeSpentOnDomains = {
-  [domain: string]: number; // Represents the time counted in milliseconds.
-}
-
-type DomainTrack = {
-  domain: string;
-  startTime: number;
-};
-
-// TODO: Handle edge cases. 
-// 1. User uses 2 windows at the same time.
-let currentDomainTrack: DomainTrack | null = null;
-let timeSpentOnDomains: TimeSpentOnDomains = {};
 
 function tabUpdateListener(_: number, changeInfo: chrome.tabs.TabChangeInfo, tab: chrome.tabs.Tab) {
   stopCounting();
