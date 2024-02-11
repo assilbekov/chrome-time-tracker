@@ -8,7 +8,3 @@ This is a Google Chrome extension that tracks the time spent on different domain
 - Displays the total time spent on each domain in a user-friendly dashboard.
 - Provides detailed statistics and insights on the user's browsing habits.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
